@@ -203,7 +203,7 @@ words={'en':en, 'es':es}
 def asciSize():
   global terminal_size
   global size
-  terminal_size=os.get_terminal_size()
+  terminal_size=35
   if terminal_size[0]>=72:
     size=lan
   elif terminal_size[0]>=31 and terminal_size[0]<72:
