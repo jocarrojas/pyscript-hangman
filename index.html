@@ -176,7 +176,7 @@ lan=''
 txt={}
 words={}
 size={}
-terminal_size={}
+terminal_size=35
 
 
 # Words
@@ -199,19 +199,6 @@ words={'en':en, 'es':es}
 
 
 # Subroutines
-
-def asciSize():
-  global terminal_size
-  global size
-  terminal_size=35
-  if terminal_size[0]>=72:
-    size=lan
-  elif terminal_size[0]>=31 and terminal_size[0]<72:
-    size=f'{lan}_s'
-  else:
-    terminal_size[0]<31
-    size=f'{lan}_xs'
-    return size
 
 def c(color):
   if color=="red":
@@ -388,7 +375,7 @@ txts('lanSel')
 
 while True:
   os.system("clear")
-  asciSize()
+  size=f'{lan}_s'
   print(f"{c('purple')}")
   print()
   for letter in littleTitle[size]:
